@@ -1,0 +1,106 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+.p_about{
+    text-decoration: solid;
+    font-size: larger;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.p_wip{
+    font-style: italic;
+    font-size: larger;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 600px) {
+    main {
+        padding: 20px;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 40px;
+    }
+
+    nav ul li {
+        margin: 0 30px;
+    }
+
+    nav ul {
+        font-size: 1.5rem;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
