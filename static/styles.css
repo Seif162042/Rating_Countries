@@ -1,3 +1,4 @@
+
 /* General styles */
 body {
     font-family: Arial, sans-serif;
@@ -18,16 +19,18 @@ nav ul {
     margin: 0;
     padding: 0;
 }
+
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
-  }
-.p_about{
+}
+
+.p_about {
     text-decoration: solid;
     font-size: larger;
 }
+
 nav ul li {
     display: inline;
     margin: 0 10px;
@@ -48,40 +51,13 @@ footer {
     width: 100%;
     bottom: 0;
 }
-.p_wip{
+
+.p_wip {
     font-style: italic;
     font-size: larger;
 }
 
-/* Media Queries for Responsiveness */
-@media (min-width: 600px) {
-    main {
-        padding: 20px;
-    }
-
-    nav ul li {
-        margin: 0 20px;
-    }
-
-    footer {
-        position: relative;
-    }
-}
-
-@media (min-width: 768px) {
-    main {
-        padding: 40px;
-    }
-
-    nav ul li {
-        margin: 0 30px;
-    }
-
-    nav ul {
-        font-size: 1.5rem;
-    }
-}
-
+/* Form styles */
 form {
     display: flex;
     flex-direction: column;
@@ -103,4 +79,35 @@ button {
 
 button:hover {
     background-color: #555;
+}
+
+/* Media Queries for Responsiveness */
+/* Tablet styles */
+@media (min-width: 600px) {
+    main {
+        padding: 20px;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    main {
+        padding: 40px;
+    }
+
+    nav ul li {
+        margin: 0 30px;
+    }
+
+    nav ul {
+        font-size: 1.5rem;
+    }
 }
