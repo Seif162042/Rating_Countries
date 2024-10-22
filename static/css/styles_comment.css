@@ -1,0 +1,116 @@
+#a-for-comment{
+    padding-left: 1%;
+    color: black;
+    font-size: medium;
+    border-radius: 5px;
+    max-width: 800px;  
+}
+#form-container {
+    padding-left: 20px;  /* Adds padding on the left side */
+    max-width: 600px;    /* Optional: Limits the width of the form for better readability */
+    margin: 0 auto;      /* Centers the form horizontally if the width is set */
+}
+#comment-content{
+    max-width: 800px; 
+    height: 100px; /* Set the height of the textarea */
+    padding: 8px;  
+}
+#h1-for-comment{
+    background-color: #333;
+    color: white;
+    text-align: left;
+    font-size: 30px;
+    padding-bottom: 0%;
+    padding-left: 1%;
+}
+
+#header-for-comment{
+    color: black;
+    font-size: medium;
+    border: solid rgb(11, 165, 11);
+    border-radius: 5px;
+    max-width: 800px;  
+    /*padding: 20px; */
+    margin: 15px;
+    /*box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+
+}
+
+/*This part is for the basic header and footer*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (min-width: 600px) {
+    main {
+        padding: 20px;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 40px;
+    }
+
+    nav ul li {
+        margin: 0 30px;
+    }
+
+    nav ul {
+        font-size: 1.5rem;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}

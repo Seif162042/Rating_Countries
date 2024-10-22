@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_comment.css') }}">
+
+</head>
+<body>
+    <header id="h1-for-comment">Comments: </header>
+    <a id="a-for-comment"href="{{ url_for('add_product') }}">Add New Comment</a>
+    <ul>
+        <h1 id="header-for-comment" >Here you can add your own comment regarding any of my trips. Feel free to also give your own opinion. </h1>
+        {% for product in products %}
+        <li>
+            <h2>{{ product.title }}</h2>
+            <p>{{ product.description }}</p>
+            <a id="a-for-comment"href="{{ url_for('update_product', id=product.id) }}">Edit</a>
+            <form action="{{ url_for('delete_product', id=product.id) }}" method="post" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+        {% else %}
+        <p>No comments have been posted</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>
