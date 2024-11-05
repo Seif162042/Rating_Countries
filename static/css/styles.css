@@ -74,6 +74,19 @@ footer {
     font-size: 0.9em;
     color: #555; 
 }
+.img-with-text-horizontal {
+    text-align: center;
+}
+
+.img-with-text-horizontal img {
+    max-width: 46%;
+}
+
+.img-with-text-horizontal figcaption {
+    margin-top: 8px; 
+    font-size: 0.9em;
+    color: #555; 
+}
 .image-row {
     display: flex;
     flex-direction: row;
