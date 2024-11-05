@@ -74,15 +74,16 @@ footer {
     font-size: 0.9em;
     color: #555; 
 }
-.image-column {
+.image-row {
+    display: flex;
     flex-direction: row;
     align-items: center; 
 }
 
-.image-column img {
+.image-row img {
     max-width: 50%;
 }
-/*.image-column figcaption {
+/*.image-row figcaption {
     margin-top: 8px; 
     font-size: 0.9em;
     color: #555; 
