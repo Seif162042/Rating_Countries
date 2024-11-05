@@ -81,6 +81,18 @@ button {
 button:hover {
     background-color: #555;
 }
+img {
+    max-width: 100%; /* Limits the image width to the container’s width */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes extra space below the image */
+}
+@media (max-width: 600px) {
+    img {
+        width: 90%; /* Adjusts the image width to 90% of the container */
+        margin: 0 auto; /* Centers the image if needed */
+    }
+}
+
 
 /* Media Queries for Responsiveness */
 /* Tablet styles */
