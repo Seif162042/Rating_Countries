@@ -23,9 +23,12 @@
         <p>On this website you will see me rate all the countries I have visited throughout my life.</p>
         <p style="font-size:150%; text-align:center;"> These are the countries I have visited and stayed in for a minimum of 2 Days</p>
         <img src="{{ url_for('static', filename='Images/Countries.png') }}" alt="Countries I have visited Map" class="center">
-        <h2>Italy:</h2>
+        <h2 style="text-align:center">Italy:</h2>
         <p>I have stayed in Italy for about 10 and I traveled to most of the major cities, including Rome, Milan, Napoli and then the Amalfi coast.</p>
-        <img src="{{ url_for('static', filename='Images/IT_statue.jpg') }}" alt="Pictures from my trip to italy" class="center">
+        <figure class="img-with-text">
+            <img src="{{ url_for('static', filename='Images/IT_statue.jpg') }}" alt="Pictures from my trip to italy" class="center">
+            <figacaption> This is a famous statue and fountain in Italy where a lot of people throw coins and make a wish, it was nice but very crowded.</figacaption>
+        </figure>
     </main>
 
     <footer>
