@@ -60,20 +60,31 @@ footer {
     font-style: italic;
     font-size: larger;
 }
-/*This is for the main page*/
+/*This is for the main page mainly the pictures and their captions*/
 .image-with-text {
-    text-align: center; /* Centers the text and image */
+    text-align: center;
 }
 
 .image-with-text img {
-    max-width: 100%; /* Makes the image responsive */
+    max-width: 100%;
 }
 
 .image-with-text figcaption {
-    margin-top: 8px; /* Adds space between the image and text */
-    font-size: 0.9em; /* Optional: adjust font size */
-    color: #555; /* Optional: change text color */
+    margin-top: 8px; 
+    font-size: 0.9em;
+    color: #555; 
 }
+.image-column {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.image-column img {
+    max-width: 100%;
+}
+
 
 /* Form styles */
 form {
