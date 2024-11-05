@@ -75,7 +75,6 @@ footer {
     color: #555; 
 }
 .image-column {
-    display: flex;
     flex-direction: row;
     align-items: center; 
 }
