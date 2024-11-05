@@ -61,15 +61,15 @@ footer {
     font-size: larger;
 }
 /*This is for the main page mainly the pictures and their captions*/
-.image-with-text {
+.img-with-text {
     text-align: center;
 }
 
-.image-with-text img {
+.img-with-text img {
     max-width: 100%;
 }
 
-.image-with-text figcaption {
+.img-with-text figcaption {
     margin-top: 8px; 
     font-size: 0.9em;
     color: #555; 
@@ -82,6 +82,11 @@ footer {
 
 .image-column img {
     max-width: 50%;
+}
+.image-column figcaption {
+    margin-top: 8px; 
+    font-size: 0.9em;
+    color: #555; 
 }
 
 
