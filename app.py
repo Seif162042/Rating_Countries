@@ -34,7 +34,7 @@ def about():
 def contact():
     return render_template('contact.html')
 
-@app.route('/home')
+@app.route('/index.html')
 def main():
     return render_template('index.html')
 
