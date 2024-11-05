@@ -35,7 +35,7 @@ def contact():
     return render_template('contact.html')
 
 @app.route('/home')
-def home():
+def main():
     return render_template('index.html')
 
 
