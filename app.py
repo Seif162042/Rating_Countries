@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask import jsonify
+import os
 
 app = Flask(__name__)
 
@@ -78,7 +79,8 @@ def delete_product(id):
     return redirect(url_for('products'))
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
 
     
 # API route to fetch all products in JSON format
