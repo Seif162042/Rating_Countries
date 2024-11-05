@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from flask import jsonify
 
 app = Flask(__name__)
 
@@ -78,3 +79,10 @@ def delete_product(id):
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
+# API route to fetch all products in JSON format
+@app.route('/api/products')
+def api_products():
+    products = Product.query.all()
+    products_data = [{"title": p.title, "description": p.description} for p in products]
+    return jsonify(products=products_data)
