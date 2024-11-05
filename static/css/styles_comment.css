@@ -6,13 +6,13 @@
     max-width: 800px;  
 }
 #form-container {
-    padding-left: 20px;  /* Adds padding on the left side */
-    max-width: 600px;    /* Optional: Limits the width of the form for better readability */
-    margin: 0 auto;      /* Centers the form horizontally if the width is set */
+    padding-left: 20px;  
+    max-width: 600px;    
+    margin: 0 auto;      
 }
 #comment-content{
     max-width: 800px; 
-    height: 100px; /* Set the height of the textarea */
+    height: 100px; 
     padding: 8px;  
 }
 #h1-for-comment{
@@ -52,8 +52,6 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
-    border-top: 2px solid black;
-
 }
 
 nav ul {

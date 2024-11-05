@@ -2,8 +2,21 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask import jsonify
 import os
+from flask import Flask, render_template, request, redirect, url_for, flash
+from flask_mail import Mail, Message
 
 app = Flask(__name__)
+app.secret_key = 'a_secret_key_321'
+
+# Flask-Mail configuration for Gmail
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = 'for.my.website162042@gmail.com'
+app.config['MAIL_PASSWORD'] = 'zuqret-gyvvos-5Vasco'
+app.config['MAIL_DEFAULT_SENDER'] = 'for.my.website162042@gmail.com'
+
+mail = Mail(app)
 
 # Configuration for the database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///products.db'
@@ -82,6 +95,23 @@ def delete_product(id):
     db.session.commit()
     return redirect(url_for('products'))
 
+def send_email():
+    name = request.form['name']
+    email = request.form['email']
+    message = request.form['message']
+    msg = Message(subject=f"New Contact Form Submission from {name}",
+                  recipients=['your_email@gmail.com'],  # Replace with your email
+                  body=f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}")
+        # Send the email and handle success/error messages
+    try:
+        mail.send(msg)
+        flash('Your message has been sent successfully!', 'success')
+    except Exception as e:
+        print(e)  # Print any error for debugging
+        flash('There was an error sending your message. Please try again later.', 'error')
+
+    return redirect(url_for('contact'))
+    
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)

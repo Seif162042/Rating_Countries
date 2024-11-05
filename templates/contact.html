@@ -21,7 +21,7 @@
     <main>
         <h1>Contact Me</h1>
         <p>If you wish to ask me more questions or just want to talk please use this form to contact me:</p>
-        <form>
+        <form action="{{ url_for('send_email') }}" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br><br>
 
@@ -33,6 +33,13 @@
 
             <button type="submit">Submit</button>
         </form>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
     </main>
 
     <footer>
